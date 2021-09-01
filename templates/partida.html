@@ -1,0 +1,43 @@
+{% extends './bootstrap/base.html' %}
+{% load static %}
+
+
+
+{% block contenido %}
+<style>
+  div{
+  padding-top: 15px;
+  padding-bottom: 20px;
+  
+}
+
+</style>
+
+<div id="pregunta">
+
+    <h2 id="puntaje" >Puntaje: {{puntaje}}     Nivel: {{nivel}}</h2>
+   
+  <h4>Estas respondiendo categoria: {{categoria}}</h4>
+  
+    <h1>{{pregunta}}</h1><h2>{{mensaje}}</h2>
+
+</div>
+  <form id = "preguntero" action="{% url 'partida'  %}" method="post">
+    {% csrf_token %}
+
+    {% for r in respuestas %}
+      <!-- <input type="checkbox" name="respuesta" value="{{ r }}">{{ r.texto }}<br> -->
+    
+      <input type="checkbox" name="respuesta" value="{{ r.id }}_{{ r.pregunta_id }}"><br>
+      <label for="">{{r.texto}}</label>
+    
+      {% endfor %}
+    
+    <input type="submit" value="LISTO">
+  </form>
+  <div id="terminar-juego">
+    <a id="terminar" class="btn btn-success" href="{% url 'resultados'  %}" role="button" >TERMINAR EL JUEGO</a>
+
+  </div>
+  
+{% endblock contenido %}

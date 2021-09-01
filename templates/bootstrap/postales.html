@@ -1,0 +1,119 @@
+{% extends 'bootstrap/base.html' %}
+
+{% block contenido %}
+<body>
+
+  <main id="main">
+
+    <!-- ======= Breadcrumbs ======= -->
+    <section id="breadcrumbs" class="breadcrumbs">
+      <div class="container">
+
+        <ol>
+          <li><a href="{% url 'principal' %}">Inicio</a></li>
+          <li>Postales</li>
+        </ol>
+        <h2>Postales de nuestra Provincia</h2>
+
+      </div>
+    </section><!-- End Breadcrumbs -->
+
+    <!-- ======= Portfolio Section ======= -->
+        <section id="portfolio" class="portfolio">
+      <div class="container">
+
+        <div class="row">
+          <div class="col-lg-12 d-flex justify-content-center">
+            <ul id="portfolio-flters">
+              <li data-filter="*" class="filter-active">Provincia del Chaco, en fotos</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="row portfolio-container">
+
+          <div class="col-lg-5 col-md-5 portfolio-item filter-app">
+            <div class="portfolio-wrap">
+              <img src="/static/assets/img/portfolio/resis1.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Plaza 25 de Mayo</h4>
+                <p>Resistencia</p>
+                <div class="portfolio-links">
+                  <a href="/static/assets/img/portfolio/resis1.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Resistencia"><i class="bx bx-plus"></i></a>
+                  <a href="{% url 'portfolio' %}#plaza" title="Mas Detalles"><i class="bx bx-link"></i></a>
+                </div> 
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-5 col-md-5 portfolio-item filter-web">
+            <div class="portfolio-wrap">
+              <img src="/static/assets/img/portfolio/resis9.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Ciudad de Las Esculturas</h4>
+                <p>Resistencia</p>
+                <div class="portfolio-links">
+                  <a href="/static/assets/img/portfolio/resis9.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Esculturas"><i class="bx bx-plus"></i></a>
+                  <a href="{% url 'portfolio' %}#ciudad" title="Mas detalles"><i class="bx bx-link"></i></a>
+                </div> 
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-5 col-md-5 portfolio-item filter-app">
+            <div class="portfolio-wrap">
+              <img src="/static/assets/img/portfolio/resis13.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Iglesia Catedral </h4>
+                <p>Resistencia</p>
+                <div class="portfolio-links">
+                  <a href="/static/assets/img/portfolio/resis13.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 2"><i class="bx bx-plus"></i></a>
+                  <a href="{% url 'portfolio' %}#catedral" title="More Details"><i class="bx bx-link"></i></a>
+                </div> 
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-5 col-md-5 portfolio-item filter-card">
+            <div class="portfolio-wrap">
+              <img src="/static/assets/img/portfolio/resis11.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Shopping Sarmiento</h4>
+                <p>Resistencia</p>
+                <div class="portfolio-links">
+                  <a href="/static/assets/img/portfolio/resis11.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Catedral"><i class="bx bx-plus"></i></a>
+                  <a href="{% url 'portfolio' %}#shopping" title="Mas detalles"><i class="bx bx-link"></i></a>
+                </div> 
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-5 col-md-5 portfolio-item filter-web">
+            <div class="portfolio-wrap">
+              <img src="/static/assets/img/portfolio/turismo1.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Ciudades Turísticas</h4>
+                <p>Chaco</p>
+                <div class="portfolio-links">
+                  <a href="/static/assets/img/portfolio/turismo1.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Ciudades Turísticas"><i class="bx bx-plus"></i></a>
+                  <a href="{% url 'portfolio' %}#turismo" title="Mas detalles"><i class="bx bx-link"></i></a>
+                </div> 
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Portfolio Section -->
+
+
+
+  </main><!-- End #main -->
+
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+</body>
+
+{% endblock contenido %}

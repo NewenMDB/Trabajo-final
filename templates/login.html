@@ -1,0 +1,25 @@
+{% extends './bootstrap/base.html' %}
+
+{% block contenido %}
+<style>
+	#div-login{
+	padding-top: 15px;
+	padding-bottom: 80px;
+ 
+   }
+</style>
+
+	<form method="POST">{% csrf_token %}
+		{{form.errors}}
+		<input type="text" name="username" placeholder="USUARIO">
+		<input type="password" name="password" placeholder="CONTRASEÑA">
+
+		<input type="submit" name="" value="LOGIN">
+        <a class="btn btn-success" href="{%url 'registro'%}" role="button">Registrese</a>
+
+	</form>
+	<div id="div-login">
+
+	</div>
+
+{% endblock contenido %}
